@@ -7,6 +7,11 @@ cipherClass = Ciphers()
 #właściwia logika programu znajduje się w pliku klasy.py
 #kod jest pisany w większości po angielsku za wyjątkiem komunikatów zwrotnych do użytkownika
 
+#znajdujac sie w katalogu cezar
+#przykladowe wywolanie
+#python3 cezar.py -c -e
+
+
 if len(sys.argv) >= 2:
     if sys.argv[1] == '-c':
         print("wybrano szyfr cezara")
