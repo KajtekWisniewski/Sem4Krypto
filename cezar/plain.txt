@@ -1,0 +1,1 @@
+to jest TO Pewien 123 tekst ktory zostanie zaszyfrowany cyfrem cezara lub szyfrem afinicznym
