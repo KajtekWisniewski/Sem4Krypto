@@ -1,0 +1,2 @@
+To jest tekst jawny do szyfrowania. Można tu umieścić różne znaki.
+Tutaj jest kolejna linijka tekstu jawnego. Jest ona tak samo długa jak poprzednia.
