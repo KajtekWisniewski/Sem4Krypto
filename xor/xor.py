@@ -37,9 +37,12 @@ def decrypt(crypto_file, key_file):
     with open('decrypt.txt', 'w') as f:
         f.write(decrypted_text)
 
-def cryptoanalysis(crypto_file):
+def cryptoanalysis(crypto_file, plain_file):
     with open(crypto_file, 'r') as f:
         encrypted_text = f.readlines()
+
+    with open(plain_file, 'r') as f:
+        plain_text = f.read()
 
     # Inicjalizujemy listę do przechowywania odszyfrowanych tekstów
     decrypted_texts = []
@@ -47,12 +50,16 @@ def cryptoanalysis(crypto_file):
     # Iterujemy przez wszystkie linijki zaszyfrowanego tekstu
     for line in encrypted_text:
         decrypted_text = ''
-        # Sprawdzamy, czy linijka zawiera spacje, jeśli tak, to znaczy, że litera na tej pozycji była spacją
-        for char in line:
+        # Iterujemy przez znaki zaszyfrowanego tekstu
+        for i, char in enumerate(line):
+            # Jeśli znak jest spacją, to zachowujemy spację
             if char == ' ':
                 decrypted_text += ' '
             else:
-                decrypted_text += '_'
+                # W przeciwnym razie xorujemy znaną spację z zaszyfrowanym znakiem,
+                # a następnie xorujemy wynik z literą tekstu jawnego na tej samej pozycji
+                decrypted_char = chr(ord(' ') ^ ord(char) ^ ord(plain_text[i]))
+                decrypted_text += decrypted_char
         # Dodajemy odszyfrowany tekst do listy
         decrypted_texts.append(decrypted_text)
 
@@ -60,6 +67,7 @@ def cryptoanalysis(crypto_file):
     with open('decrypt.txt', 'w') as f:
         for text in decrypted_texts:
             f.write(text + '\n')
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Program do szyfrowania i kryptoanalizy tekstu za pomocą operacji XOR.')
@@ -73,6 +81,6 @@ if __name__ == "__main__":
     elif args.e:
         encrypt('plain.txt', 'key.txt')
     elif args.k:
-        cryptoanalysis('crypto.txt')
+        cryptoanalysis('crypto.txt', 'plain.txt')
     else:
         print("Nie wybrano żadnej opcji.")
