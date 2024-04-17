@@ -1,0 +1,1 @@
+to jest przykładowy tekst do szyfrowania za pomocą operacji xor. można w nim umieścić różne znaki oraz spacje. 
