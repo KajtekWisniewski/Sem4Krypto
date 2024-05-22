@@ -1,0 +1,42 @@
+cat hash-.pdf personal.txt | md5sum
+cat hash-.pdf personal_.txt | md5sum
+7177737843a9e1da5140dd730bebfc07
+cfcc2cc26aab961126a723af9e37bb05
+Liczba rozniacych sie bitow: 76 z 128, procentowo (59.38%)
+
+cat hash-.pdf personal.txt | sha1sum
+cat hash-.pdf personal_.txt | sha1sum
+70fb83172e5e0176ed1edc5cb13436da37af780c
+6a052f1e8c45cac3aac02a6d3b658741f39754fe
+Liczba rozniacych sie bitow: 81 z 160, procentowo (50.62%)
+
+cat hash-.pdf personal.txt | sha224sum
+cat hash-.pdf personal_.txt | sha224sum
+39291b0a1fdffd566d6779dff52bafd6cd85c7d139ff1a47ad1c431b
+8fdb35f176f6075fc649b0346e1656b9c8214f88dc9b6925cd9b7d2d
+Liczba rozniacych sie bitow: 119 z 224, procentowo (53.12%)
+
+cat hash-.pdf personal.txt | sha256sum
+cat hash-.pdf personal_.txt | sha256sum
+8df12a999a1ae109c1ed585fe080b36d6046a88bb8472eff9ac6720f44c0dcaf
+1909c4e01fe155c6c483744fe01bb013fbd0cce4c7388f56285f1c1c3a2564b9
+Liczba rozniacych sie bitow: 136 z 256, procentowo (53.12%)
+
+cat hash-.pdf personal.txt | sha384sum
+cat hash-.pdf personal_.txt | sha384sum
+e6ef4d94a5d0a940cbce6e912cdbc7fabb6665fa1d72e2afc226fdc5529f6e57e00ba5d5c0f4883334c8ac32e6b9c340
+37ccfde184898c23f81373604c95223a4ca2d859b1158351782e117eac4053211b2d4f5a6052b4490a26a6c032042ce9
+Liczba rozniacych sie bitow: 214 z 384, procentowo (55.73%)
+
+cat hash-.pdf personal.txt | sha512sum
+cat hash-.pdf personal_.txt | sha512sum
+6e4a367cbea52652f94dfeb9e09f2529e58fd966b5a3c8328dfd66b1574f15d20aba269f9572754e6539d27f92c3bb4e821bb4ba22e6fe660826371fabbecbf1
+bcc62d9073cdafa6abaaf8dc73b5c09fb2f464084ee06bd350d3b047655f706c5e7b6a940bbcc9c4ababd9ce5cb9ff995d9e9db0729ac50da102101d26620d22
+Liczba rozniacych sie bitow: 263 z 512, procentowo (51.37%)
+
+cat hash-.pdf personal.txt | b2sum
+cat hash-.pdf personal_.txt | b2sum
+d4ad1a3370ace449493862a4d8498017a0e67eb3cc6ad13eab2247a1c1051c4213e0d9f044780628840c50b6573b85d0c6e769953acc618a01088f7ba4bb7550
+1d3416e6e405ad4954fab860cc1702ad27682bbb28deac62d59edae7f4963b09982529c9db3d3a53d5d15f6e98c45214ab349d28f99eb12370ac997a11a48b2a
+Liczba rozniacych sie bitow: 263 z 512, procentowo (51.37%)
+
